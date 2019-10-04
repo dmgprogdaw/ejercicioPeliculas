@@ -39,7 +39,7 @@ public class Videoclub {
 			// añadir la nueva pelicula
 			lista.add(pelicula);
 		}
-		else {
+		else{
 			
 			// crear nueva lista de peliculas
 			ArrayList<Pelicula> lista = new ArrayList<Pelicula>();
