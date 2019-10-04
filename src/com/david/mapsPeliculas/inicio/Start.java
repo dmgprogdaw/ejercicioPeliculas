@@ -2,9 +2,7 @@ package com.david.mapsPeliculas.inicio;
 
 import com.david.mapsPeliculas.beans.Director;
 import com.david.mapsPeliculas.beans.Pelicula;
-import com.david.mapsPeliculas.negocio.ListaPeliculas;
 import com.david.mapsPeliculas.negocio.Videoclub;
-import com.david.mapsPeliculas.print.ImprimirPeliculasConsola;
 
 public class Start {
 
@@ -39,7 +37,7 @@ public class Start {
 		pelicula3.setTitulo("Sen to Chihiro no Kamikakushi");
 		pelicula3.setAnio(2001);
 		pelicula3.setDirector(hayao);
-		pelicula1.setPresupuesto(1900000000.00);
+		pelicula3.setPresupuesto(1900000000.00);
 		
 		Pelicula pelicula4 = new Pelicula();
 		pelicula4.setTitulo("Mary to Majo no Hana");
@@ -56,13 +54,12 @@ public class Start {
 		pelicula6.setAnio(1988);
 		pelicula6.setDirector(hayao);
 		
-		ListaPeliculas lista = new ListaPeliculas();
 		Videoclub misPelis = new Videoclub();
-		misPelis.addPelicula(pelicula3, lista);
-		misPelis.addPelicula(pelicula6, lista);
-		lista.addPelicula(pelicula6);
-		lista.addPelicula(pelicula3);
-		
-		ImprimirPeliculasConsola.imprimirListaPeliculas(lista);
+		misPelis.addPelicula(pelicula3);
+		misPelis.addPelicula(pelicula6);
+		misPelis.addPelicula(pelicula2);
+
+		misPelis.getPelicula();
+//		ImprimirPeliculasConsola.imprimir(listaPeliculas);
 	}
 }
